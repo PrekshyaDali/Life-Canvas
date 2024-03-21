@@ -1,4 +1,3 @@
-
 export default function NavBar() {
   return (
     <div className="flex w-full fixed z-50 top-0 left-0 right-0  h-16  items-center justify-between bg-orange-500 pr-10 pl-10">
@@ -6,11 +5,11 @@ export default function NavBar() {
         <img className="object-cover" src="/img/logo.png" alt="" />
       </div>
 
-      <div className = "flex space-x-5">
-        <div className = "flex justify-center ">
+      <div className="flex space-x-5">
+        <div className="flex justify-center ">
           <ul className="flex space-x-8 text-white text-md items-center justify-center">
             <li>Home</li>
-            <li>About Us</li>
+
             <li>Blog</li>
             <li>Contact Us</li>
           </ul>

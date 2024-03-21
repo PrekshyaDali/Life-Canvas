@@ -11,32 +11,20 @@ export default function ContactUs() {
         <div className="flex flex-col space-y-5  sm:flex-row sm:space-y-0 sm:space-x-5 w-full">
           <div className="w-full">
             <label htmlFor="FirstName">First Name</label>
-            <input
-              type="text"
-              className="w-full h-10 border-2 border-orange-300 bg-transparent rounded-md p-2"
-            />
+            <input type="text" className="inputfields" />
           </div>
           <div className="w-full">
             <label htmlFor="LastName">Last Name</label>
-            <input
-              type="text"
-              className="w-full h-10 border-2 border-orange-300  bg-transparent rounded-md p-2"
-            />
+            <input type="text" className="inputfields" />
           </div>
         </div>
         <div>
           <label htmlFor="Email">Email</label>
-          <input
-            type="text"
-            className="w-full h-10 border-2 border-orange-300 bg-transparent rounded-md p-2"
-          />
+          <input type="text" className="inputfields" />
         </div>
         <div>
           <label htmlFor="Subject">Subject</label>
-          <input
-            type="text"
-            className="w-full h-10 border-2 border-orange-300 bg-transparent rounded-md p-2"
-          />
+          <input type="text" className="inputfields" />
         </div>
         <div>
           <label htmlFor="Message">Message</label>
@@ -44,7 +32,7 @@ export default function ContactUs() {
             type="text"
             cols={20}
             rows={4}
-            className="bg-transparent w-full border-2 border-orange-300 rounded-md p-2"
+            className="bg-transparent w-full border-2 border-gray-300 rounded-md p-2"
           />
         </div>
         <div className="flex justify-end">

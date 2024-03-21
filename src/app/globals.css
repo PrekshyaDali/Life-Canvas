@@ -1,4 +1,9 @@
 @tailwind base;
 @tailwind components;
+/* styles.css */
+.inputfields {
+    @apply w-full h-10 border-2 border-gray-200 bg-transparent rounded-md p-2;
+}
+
 @tailwind utilities;
 

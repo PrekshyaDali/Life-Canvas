@@ -6,14 +6,7 @@ export default function PostDetails(props) {
     <>
       {/* right section*/}
 
-      <div className="  h-fit  p-3 flex space-x-8 hover:bg-gray-100 rounded-md ">
-        <div className=" h-32 flex justify-center items-center">
-            <img
-              className="object-cover rounded-md w-full h-full"
-              src="/img/Heroimg.jpg"
-              alt=""
-            />
-          </div>
+      <div className="  h-fit  p-3 flex-col space-y-3 sm:flex sm:flex-row sm:space-x-8 sm:space-y-0 hover:bg-gray-100 rounded-md ">
         <div className="flex-1 flex-col space-y-3 ">
           <div>
             <span className="text-sm text-gray-500">
@@ -32,6 +25,18 @@ export default function PostDetails(props) {
             <img
               className="absolute right-2 w-8 top-1"
               src="/img/rightarrow.png"
+              alt=""
+            />
+          </div>
+        </div>
+
+        {/* img */}
+
+        <div className="flex justify-center items-center">
+          <div className=" h-full w-56 ">
+            <img
+              className="object-cover rounded-md w-full h-full"
+              src="/img/Heroimg.jpg"
               alt=""
             />
           </div>
