@@ -1,7 +1,7 @@
 
 export default function NavBar() {
   return (
-    <div className="flex w-full fixed top-0 left-0 right-0  h-16  items-center justify-between bg-orange-500 pr-10 pl-10">
+    <div className="flex w-full fixed z-50 top-0 left-0 right-0  h-16  items-center justify-between bg-orange-500 pr-10 pl-10">
       <div className="bg-white h-16 w-16 rounded-full justify-center flex items-center">
         <img className="object-cover" src="/img/logo.png" alt="" />
       </div>

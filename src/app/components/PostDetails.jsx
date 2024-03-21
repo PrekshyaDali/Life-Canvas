@@ -1,22 +1,42 @@
 import Button from "./Button";
+import Featuredpost from "./Featuredpost";
 
 export default function PostDetails(props) {
   return (
-    <div className="max-w-96 h-fit border-2 border-orange-50 p-3 flex flex-col space-y-5">
-      <div className="w-full h-52">
-        <img
-          className="object-cover w-full h-full"
-          src="/img/Heroimg.jpg"
-          alt=""
-        />
+    <>
+      {/* right section*/}
+
+      <div className="  h-fit  p-3 flex space-x-8 hover:bg-gray-100 rounded-md ">
+        <div className=" h-32 flex justify-center items-center">
+            <img
+              className="object-cover rounded-md w-full h-full"
+              src="/img/Heroimg.jpg"
+              alt=""
+            />
+          </div>
+        <div className="flex-1 flex-col space-y-3 ">
+          <div>
+            <span className="text-sm text-gray-500">
+              By <span className="text-orange-500">John Deo </span>March 21,
+              2024
+            </span>
+            <h1 className="text-xl font-bold">{props.title}</h1>
+            <p className="line-clamp-3">{props.body}</p>
+          </div>
+          <div className="flex justify-end relative">
+            <div className="">
+              <button className="pl-6 pr-12 py-2 hover:bg-orange-400 active:bg-orange-500 bg-orange-500 rounded-full text-sm text-white">
+                Read more
+              </button>
+            </div>
+            <img
+              className="absolute right-2 w-8 top-1"
+              src="/img/rightarrow.png"
+              alt=""
+            />
+          </div>
+        </div>
       </div>
-      <div className="flex flex-col space-y-3">
-        <h1 className="text-xl font-bold">{props.title}</h1>
-        <p className="line-clamp-3">{props.body}</p>
-      </div>
-      <div className="flex justify-end">
-        <Button name="Read more"></Button>
-      </div>
-    </div>
+    </>
   );
 }
