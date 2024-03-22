@@ -1,11 +1,11 @@
 import { Children } from "react";
-import NavBar from "../components/NavBar";
+import NavBar from "../pages/components/NavBar";
 
-export default function Layout({children}) {
+export default function Layout({ children }) {
   return (
     <>
       <NavBar></NavBar>
-      <div className = "pt-16">{children}</div>
+      <div className="pt-16">{children}</div>
     </>
   );
 }

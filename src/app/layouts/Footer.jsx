@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <div className="bg-[#232536] w-full h-fit pt-5 pb-5 text-white pl-10 pr-10 md:pl-20 md:pr-20 flex justify-between space-x-10 ">
-      <div classname="">
+      <div className="">
         <h1 className="font-semibold text-xl ">Life Canvas</h1>
         <div className="w-20 mb-5 ">
           <img className="object-cover" src="/img/logo.png" alt="" />
