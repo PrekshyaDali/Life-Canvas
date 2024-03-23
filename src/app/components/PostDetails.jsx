@@ -1,13 +1,13 @@
-'use client'
+"use client";
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-export default function PostDetails(props) {
+export default function PostDetails({post}) {
   const router = useRouter();
 
   const handleReadMore = () => {
-    router.push(`/blog/${props.id}`);
+    router.push(`/allblogs/${post?.id}`);
   };
 
   return (
@@ -19,8 +19,8 @@ export default function PostDetails(props) {
               By <span className="text-orange-500">John Deo</span> March 21,
               2024
             </span>
-            <h1 className="text-xl font-bold mb-3">{props.title}</h1>
-            <p className="line-clamp-2">{props.body}</p>
+            <h1 className="text-xl font-bold mb-3">{post?.title}</h1>
+            <p className="line-clamp-2">{post?.body}</p>
           </div>
           <div className="flex justify-end relative">
             <div>
@@ -31,7 +31,7 @@ export default function PostDetails(props) {
                 Read more
               </button>
             </div>
-            <Link href={`/blog/${props.id}`}>
+            <Link href={`/allblogs/${post?.id}`}>
               <img
                 className="absolute right-2 w-8 top-1 cursor-pointer"
                 src="/img/rightarrow.png"

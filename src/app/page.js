@@ -1,12 +1,9 @@
-import NavBar from "./pages/components/NavBar";
-import AllBlogs from "./allblogs/page";
 
-import ContactUs from "./ContactUs/page";
-import Footer from "./layouts/Footer";
-import Hero from "./pages/Home/Hero";
-import Posts from "./layouts/Posts";
-import Layout from "./layouts/Layout";
-import BlogRead from "./pages/blog/[id]";
+import Layout from "./layouts/Layout"
+import Hero from "./Home/Hero";
+import Posts from "./layouts/Posts"
+import Footer from "./layouts/Footer"
+
 
 export default function page() {
   return (

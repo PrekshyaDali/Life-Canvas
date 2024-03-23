@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import PostDetails from "../pages/components/PostDetails";
+import PostDetails from "../components/PostDetails";
 import Layout from "../layouts/Layout";
 
 export default function AllBlogs() {
@@ -33,12 +33,7 @@ export default function AllBlogs() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           {blogs.map((blog) => (
-            <PostDetails
-              key={blog.id}
-              title={blog.title}
-              body={blog.body}
-              id={blog.id}
-            />
+            <PostDetails key={blog.id} post={blog} />
           ))}
         </div>
       </div>

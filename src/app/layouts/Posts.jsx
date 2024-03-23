@@ -1,8 +1,8 @@
-'use client'
+"use client";
 import React, { useEffect, useState } from "react";
-import PostDetails from "../pages/components/PostDetails";
+import PostDetails from "../components/PostDetails";
 import Link from "next/link";
-import Featuredpost from "../pages/components/Featuredpost";
+import Featuredpost from "../components/Featuredpost";
 
 export default function Posts() {
   const [posts, setPosts] = useState([]);
@@ -26,8 +26,8 @@ export default function Posts() {
     fetchData();
   }, []);
 
-  const featuredPost = posts[0]; // Assume the first post is the featured one
-  const recentPosts = posts.slice(1, 4); // Get the next three posts for recent posts
+  const featuredPost = posts[0];
+  const recentPosts = posts.slice(1, 4);
 
   return (
     <>
@@ -56,13 +56,13 @@ export default function Posts() {
 
         {/*featured post*/}
         <div className=" flex flex-col space-y-5 lg:flex-row lg:space-x-8  lg:space-y-0">
-          <Featuredpost />
+          <Featuredpost post={featuredPost} />
 
           <div className=" flex flex-col space-y-5 p-3 border-2 border-orange-50">
             <h1 className="text-xl font-semibold">All Posts</h1>
 
             {recentPosts.map((post) => (
-              <PostDetails key={post.id} title={post.title} body={post.body} />
+              <PostDetails key={post.id} post={post} />
             ))}
           </div>
         </div>

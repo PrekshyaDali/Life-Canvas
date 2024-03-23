@@ -1,6 +1,5 @@
-import BackButton from "@/app/pages/components/BackButton";
+import BackButton from "@/app/components/BackButton";
 import Layout from "@/app/layouts/Layout";
-import { useRouter } from "next/router"; // Correct import statement
 
 export async function getStaticPaths() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -16,19 +15,14 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
-  // Use 'params' instead of 'context'
-  const id = params.id; // Access 'id' directly from 'params'
+async function fetchBlogPost(id) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
-  const data = await res.json();
-
-  return {
-    props: { blog: data },
-  };
+  const post = await res.json();
+  return post;
 }
 
-export default function BlogRead({ blog }) {
-  const router = useRouter();
+export default async function BlogRead({ params }) {
+  const blog = await fetchBlogPost(params.id);
 
   return (
     <Layout>
@@ -36,8 +30,10 @@ export default function BlogRead({ blog }) {
         <BackButton />
         <div className="flex flex-col space-y-10 justify-center items-center">
           <div className="space-y-8 p-8">
-            <h1 className="text-5xl font-semibold text-center">{blog.title}</h1>
-            <p className="text-lg">{blog.body}</p>
+            <h1 className="text-5xl font-semibold text-center">
+              {blog?.title}
+            </h1>
+            <p className="text-lg">{blog?.body}</p>
           </div>
           {/* Image */}
           <div className="max-w-5xl h-auto">

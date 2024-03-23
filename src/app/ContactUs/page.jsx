@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Layout from "../layouts/Layout";
-import Button from "../pages/components/Button";
+import Button from "../components/Button"
 
 export default function ContactUs({ data }) {
   const [formData, setFormData] = useState({
@@ -45,18 +45,17 @@ export default function ContactUs({ data }) {
       errors.message = "Message is required";
     }
 
-    // If there are errors, set them and prevent form submission
+
     if (Object.keys(errors).length > 0) {
       setErrors(errors);
       return;
     }
 
-    // If no errors, proceed with form submission
+ 
     setSubmitted(true);
   };
 
   const isValidEmail = (email) => {
-    // Basic email format validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };

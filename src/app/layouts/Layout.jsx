@@ -1,5 +1,5 @@
 import { Children } from "react";
-import NavBar from "../pages/components/NavBar";
+import NavBar from "../components/NavBar";
 
 export default function Layout({ children }) {
   return (
