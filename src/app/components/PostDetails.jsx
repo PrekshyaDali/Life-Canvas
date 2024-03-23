@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-export default function PostDetails({post}) {
+export default function PostDetails({ post }) {
   const router = useRouter();
 
   const handleReadMore = () => {
@@ -12,7 +12,7 @@ export default function PostDetails({post}) {
 
   return (
     <>
-      <div className="border-2 border-orange-50 md:border-none max-h-56 p-3 flex-col space-y-3 sm:flex sm:flex-row sm:space-x-8 sm:space-y-0 hover:bg-gray-100 rounded-md">
+      <div className="border-2 border-orange-50 md:border-none h-fit md:h-52 p-3 flex-col space-y-3 sm:flex sm:flex-row sm:space-x-8 sm:space-y-0 hover:bg-gray-100 rounded-md">
         <div className="flex-1 flex-col space-y-3">
           <div>
             <span className="text-sm text-gray-500">

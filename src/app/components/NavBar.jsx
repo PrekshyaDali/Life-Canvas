@@ -20,7 +20,7 @@ export default function NavBar() {
 
   return (
     <>
-      {/* Hamburger Icon (fixed position) */}
+   
       <div
         onClick={hamburgerClickHandler}
         className="fixed top-0 left-2 p-4 cursor-pointer z-40 visible flex items-center justify-center md:hidden"
@@ -51,16 +51,13 @@ export default function NavBar() {
                       key={index}
                       className="cursor-pointer hover:text-purple-800 focus-visible:text-purple-900"
                     >
-                      <Link  href={item.link}>
-                        {item.name}
-                      </Link>
+                      <Link href={item.link}>{item.name}</Link>
                     </li>
                   );
                 })}
             </ul>
           </div>
 
-          {/* Subscribe Button */}
         </div>
       </div>
 
